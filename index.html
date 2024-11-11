@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Game</title>
-    <link rel="stylesheet" href="static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game with Animated Background</title>
+  <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <div class="main-container">
-        <!-- Pantalla de Bienvenida -->
-        <div id="welcome-screen" class="screen">
-            <img src="images/start-img.png" alt="Trivia Game" class="main-image">
-            <h1>WELCOME TO THE TRIVIA MINI GAME VERSION V1_BETA</h1>
-            <p class="subtitle">How well do you know the world?</p>
-            <button id="start-btn" class="btn primary-btn">Start</button>
-            
-        </div>
+  <!-- Fondo animado -->
+  <div class='ripple-background'>
+    <div class='circle xxlarge shade1'></div>
+    <div class='circle xlarge shade2'></div>
+    <div class='circle large shade3'></div>
+    <div class='circle medium shade4'></div>
+    <div class='circle small shade5'></div>
+  </div>
 
-<!-- Pantalla de Preguntas -->
-<div id="question-container" class="screen hide">
-    <p id="progress" class="progress-text">Pregunta 1 de 10</p>
-    <div id="question" class="question-text"></div>
-    <div id="answers" class="btn-container">
+  <!-- Contenido principal -->
+  <div class="main-container">
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="screen">
+      <img src="images/start-img.png" alt="Trivia Game" class="main-image">
+      <h1>WELCOME TO THE TRIVIA MINI GAME</h1>
+      <p class="subtitle">How well do you know the world?</p>
+      <button id="start-btn" class="btn primary-btn">Start</button>
+    </div>
+
+    <!-- Pantalla de Preguntas -->
+    <div id="question-container" class="screen hide">
+      <p id="progress" class="progress-text">Pregunta 1 de 10</p>
+      <div id="question" class="question-text"></div>
+      <div id="answers" class="btn-container">
         <!-- Botones de respuestas se generarán aquí dinámicamente -->
-    </div>
-    <p id="feedback-message"></p> <!-- Mensaje de retroalimentación -->
-</div>
-
-
-        <!-- Pantalla de Resultado -->
-        <div id="result-screen" class="screen hide">
-            <h2>¡Fin del Juego!</h2>
-            <p id="score">Tu puntaje: <span>0</span></p>
-            <button id="restart-btn" class="btn primary-btn">Jugar de Nuevo</button>
-        </div>
+      </div>
+      <p id="feedback-message"></p> <!-- Mensaje de retroalimentación -->
     </div>
 
-    <script src="script.js"></script>
+    <!-- Pantalla de Resultado -->
+    <div id="result-screen" class="screen hide">
+      <h2>¡Fin del Juego!</h2>
+      <p id="score">Tu puntaje: <span>0</span></p>
+      <button id="restart-btn" class="btn primary-btn">Jugar de Nuevo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
